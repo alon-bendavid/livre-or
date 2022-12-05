@@ -10,6 +10,9 @@ $usernames = [];
 while (($fetched_table = $request->fetch_array())  != 0) {
     $usernames[] =   $fetched_table[1];
 }
+print_r($usernames);
+print_r($request);
+print_r($fetched_table);
 
 
 
@@ -44,19 +47,19 @@ if (isset($_POST['submit']) &&  $exiest == 0 && $passCheck = true) {
     var_dump($passCheck);
 
     $username = $_POST['username'];
-    $name = $_POST['name'];
+
     $pwd = $_POST['password'];
     $pwdRep = $_POST['repass'];
     // $currectUsr = $_SESSION[$_POST['username']];
     // echo "conecction successful";
-    $sql = "INSERT INTO utilisateurs (`id`, `login`, `prenom`, `password`) VALUES (NULL,?,?,?)";
-    $stmt = mysqli_stmt_init($mysqli);
+    $sql = "INSERT INTO utilisateurs (`id`, `login`,`password`) VALUES (NULL,?,?)";
+    $stmt = mysqli_stmt_init($con);
 
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         die(mysqli_error($con));
     }
-    mysqli_stmt_bind_param($stmt, "sss", $username, $name, $pwd);
+    mysqli_stmt_bind_param($stmt, "ss", $username, $pwd);
     mysqli_stmt_execute($stmt);
     echo "user hes successfully created";
     // sleep(2);

@@ -30,9 +30,9 @@ if (isset($_POST['loginSub'])) {
         // print_r($user[1]);
         if ($_POST['loginUsr'] == $user[1]) {
             // print_r($user);
-            if ($_POST['loginPwd'] == $user[3]) {
+            if ($_POST['loginPwd'] == $user[2]) {
                 $_SESSION['user'] = $user[1];
-                $_SESSION['useInfo'] = [$user[1], $user[2], $user[3]];
+                $_SESSION['useInfo'] = [$user[0], $user[1], $user[2]];
                 // print_r($_SESSION['useInfo']);
 
 
@@ -40,7 +40,7 @@ if (isset($_POST['loginSub'])) {
                 print_r("welcome "  . $_SESSION['user'] . " you are now logged in");
                 if ($_SESSION['user'] == 'admin') {
                     $_SESSION['admin'] = 'active';
-                    header('Location: ' . 'admin.php');
+                    // header('Location: ' . 'admin.php');
 
                     // echo "work";
                 }
