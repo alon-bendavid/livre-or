@@ -25,7 +25,7 @@
                 <li> <a href="inscription.php">Sign Up</a> </li>
                 <li> <a href="connexion.php">Log In</a> </li>
                 <li> <a href="profil.php">Profile</a> </li>
-                <!-- <?php echo "hello"; ?> -->
+
 
                 <?php
 
