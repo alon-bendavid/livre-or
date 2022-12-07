@@ -1,0 +1,54 @@
+<?php
+session_start();
+include('header.php');
+include('../includes/connect.php');
+
+
+// echo $_POST['editPwd'];
+if (isset($_POST)) {
+    var_dump($_SESSION);
+    if (isset($_SESSION)) {
+        // $request = "SELECT * FROM utilisateurs WHERE login ='" . $_SESSION['user'] . "'";
+        // $query =  $con->query($request);
+
+
+
+        if (isset($_POST['modifyUsr']) && isset($_POST['modifyPwd'])) {
+            $modifyUsr = $_POST['modifyUsr'];
+            $modifyPwd = $_POST['modifyPwd'];
+
+            // $sql = "UPDATE 'utilisateurs' SET 'login' ='" . $modifyUsr . "'  AND 'password='" . $modifyPwd . "' WHERE 'id'=17";
+            $sql = "UPDATE `utilisateurs` SET `login`='" . $modifyUsr . "',`password`='" . $modifyPwd . "' WHERE `id` = 17";
+            // $sql = "UPDATE `utilisateurs` SET `login`='" . $_POST['modifyUsr'] . "',`password`='" . $_POST['modifyPwd'] . "' WHERE id= 16";
+            $query = $con->query($sql);
+            // $users = $query->fetch_all();
+        }
+        if ($con->query($sql) === TRUE) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $conn->error;
+        }
+    }
+}
+// $modifyUsr = $_POST['modifyUsr'];
+// $usrId = $_SESSION['useInfo'][0];
+// $modifyPwd = $_POST['modifyPwd'];
+// $sql = "UPDATE utilisateurs SET login='$modifyUsr', password='$modifyPwd' WHERE id='$usrId'";
+
+?>
+
+<body>
+
+    <div>
+        <form action="profile.php" method="post">
+            <input type="text" placeholder='New Username' name="modifyUsr"><br>
+            <input type="text" placeholder="New Password" name="modifyPwd"><br>
+            <input type="text" placeholder="Retype password" name="repPwd"><br>
+
+            <button type="submit" name="editSub">edit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
