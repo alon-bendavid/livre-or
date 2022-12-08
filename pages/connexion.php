@@ -34,6 +34,7 @@ $con->close();
 
 <body>
     <h1>Login</h1>
+    <h2>login to explore the site!</h2>
     <?php
 
     ?>

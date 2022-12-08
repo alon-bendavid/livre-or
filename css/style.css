@@ -28,6 +28,11 @@ h1{
 
 
 }
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+
+}
 input{
     margin: 0.5vh;
     border-radius: 15px;
@@ -75,4 +80,26 @@ header{
 p{
     font-family: Arial, Helvetica, sans-serif;
 }
-
+img{
+    width: 3em;
+}
+.post{
+    width: 70%;
+    background-color: rgb(232, 232, 232);
+    
+    
+}
+td{
+    /* display: flex; */
+    /* border: 1px solid; */
+    
+}
+.date{
+    width: 15%;
+}
+.profil{
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-evenly;
+}

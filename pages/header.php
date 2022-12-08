@@ -35,16 +35,19 @@ session_start();
 
                 <?php
                 if (isset($_SESSION['user'])) {
-                    echo "<li> <a href='commentaire.php'> Write us a comment</a> </li>";
+                    echo "<li> <a href='commentaire.php'> Write a comment</a> </li>";
                     echo "<li> <a href='profil.php'>Profil</a> </li>";
                     echo "<li> <a href='logout.php'> Logout</a> </li>";
                 } else {
                     echo "<li> <a href='inscription.php'>Sign Up</a> </li>";
                     echo "<li> <a href='connexion.php'>Login</a> </li>";
                 }
+                if (isset($_SESSION['user'])) {
 
-
+                    echo  $_SESSION['user'][1] . " you are connected";
+                }
                 ?>
+
                 <table>
 
                 </table>
