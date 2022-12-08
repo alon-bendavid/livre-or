@@ -11,9 +11,9 @@ if (isset($_POST['subComment'])) {
     $comment = $_POST['comment'];
     $usrId = $_POST['usrId'];
     $date = $_POST['date'];
-    echo $comment;
-    echo $usrId;
-    echo $date;
+    // echo $comment;
+    // echo $usrId;
+    // echo $date;
     //make query to check if username already exist
     $sql = "SELECT * FROM commentaires ";
     // $query = $con->query($sql);
@@ -21,7 +21,7 @@ if (isset($_POST['subComment'])) {
     $comments = mysqli_fetch_array($query);
     // var_dump($query);
     // print_r($comments[2]);
-    var_dump($comments);
+    // var_dump($comments);
     //create the user and insert into databasse if username dosent exist
 
 

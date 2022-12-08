@@ -38,7 +38,7 @@ session_start();
                 } else {
                     echo "<li> <a href='connexion.php'>Login</a> </li>";
                 }
-                echo "<li> <a href='logout.php'></a> </li>";
+
 
                 ?>
                 <table>
