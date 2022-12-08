@@ -1,74 +1,40 @@
 <?php
-session_start();
+// session_start();
 
 include('header.php');
 include('../includes/connect.php');
-
-if (mysqli_connect_errno()) {
-    die('conecnection error' . mysqli_connect_error());
-}
-
-$request = $con->query("SELECT * from utilisateurs");
-$usernames = [];
-while (($fetched_table = $request->fetch_array())  != 0) {
-    $usernames[] =   $fetched_table[1];
-}
-print_r($usernames);
-print_r($request);
-print_r($fetched_table);
-
-
-
-
-//check if username already exist
-$exiest = true;
+//fetch information
 if (isset($_POST['submit'])) {
-    foreach ($usernames as $user => $x) {
-        if ($_POST['username'] == $x) {
-            echo " username already exists please choose another name";
-            $exiest = true;
-        } else {
-            $exiest = false;
-        }
-    }
-    //pass check
-    $passCheck = 0;
-}
-if (isset($_POST['submit'])) {
-    if ($_POST['repass']  !== $_POST['password']) {
-        echo "password doesnt match, please retype password";
-        die();
-    } elseif ($_POST['password'] === $_POST['repass']) {
-
-        $passCheck = true;
-    }
-}
-
-//singing up the user into the database
-if (isset($_POST['submit']) &&  $exiest == 0 && $passCheck = true) {
-
-    var_dump($passCheck);
-
     $username = $_POST['username'];
+    $password = $_POST['password'];
+    $repass = $_POST['repass'];
 
-    $pwd = $_POST['password'];
-    $pwdRep = $_POST['repass'];
-    // $hash = password_hash($password, PASSWORD_DEFAULT);
-    // $currectUsr = $_SESSION[$_POST['username']];
-    // echo "conecction successful";
-    $sql = "INSERT INTO utilisateurs (`id`, `login`,`password`) VALUES (NULL,?,?)";
-    $stmt = mysqli_stmt_init($con);
+    $sql = "SELECT * FROM utilisateurs WHERE login='$username'";
+    // $query = $con->query($sql);
+    $query = mysqli_query($con, $sql);
+    $printUser = mysqli_fetch_array($query);
+    // var_dump($query);
+    // print_r($printUser[2]);
+    var_dump($printUser);
+    //create the user and insert into databasse
+    if ($printUser == null) {
+        if ($password == $repass) {
 
-
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        die(mysqli_error($con));
+            echo "Acount hes successfully created!";
+            //insert information into databse
+            $sql = "INSERT INTO `utilisateurs`(`id`, `login`, `password`) VALUES (null,'$username','$password')";
+            $query = mysqli_query($con, $sql);
+            header('Location: ' . 'connexion.php');
+        } elseif ($password != $repass) {
+            echo "Password doesnt match, please retype password";
+        }
+    } else {
+        echo "Username already taken, please choose another username";
     }
-    mysqli_stmt_bind_param($stmt, "ss", $username, $pwd);
-    mysqli_stmt_execute($stmt);
-    echo "user hes successfully created";
-    // sleep(2);
-    header('Location: ' . 'connexion.php');
 }
+
+
+
 
 ?>
 
