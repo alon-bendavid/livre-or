@@ -1,6 +1,11 @@
 <?php
 session_start();
-// $user = $_SESSION['user'];
+
+// if (isset($_SESSION)) {
+
+//     $_SESSION['user'][1] = $user;
+// }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +34,11 @@ session_start();
                 <?php
                 if (isset($_SESSION['user'])) {
                     echo "<li> <a href='logout.php'> Logout</a> </li>";
+                    echo "<li> <a href='commentaire.php'> Write us a comment</a> </li>";
                 } else {
                     echo "<li> <a href='connexion.php'>Login</a> </li>";
                 }
+                echo "<li> <a href='logout.php'></a> </li>";
 
                 ?>
                 <table>

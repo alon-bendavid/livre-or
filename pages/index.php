@@ -8,6 +8,10 @@ if (!isset($_SESSION['user'])) {
 
 <body>
     <h1>Home page</h1>
+    <?php
+    echo "welcome " . $_SESSION['user'][1] . " you are now logged in";
+
+    ?>
 </body>
 
 </html>

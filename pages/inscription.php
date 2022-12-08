@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $repass = $_POST['repass'];
-
+    //make query to check if username already exist
     $sql = "SELECT * FROM utilisateurs WHERE login='$username'";
     // $query = $con->query($sql);
     $query = mysqli_query($con, $sql);
@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
     // var_dump($query);
     // print_r($printUser[2]);
     var_dump($printUser);
-    //create the user and insert into databasse
+    //create the user and insert into databasse if username dosent exist
     if ($printUser == null) {
         if ($password == $repass) {
 
