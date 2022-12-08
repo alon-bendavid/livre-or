@@ -25,17 +25,21 @@ session_start();
         <ul>
             <div class="navBar" method="post">
                 <li> <a href="index.php">Home</a> </li>
-                <li> <a href="inscription.php">Sign Up</a> </li>
+                <li> <a href="livre-or.php">Livre-or</a> </li>
+
+
                 <!-- <li> <a href="connexion.php">Log In</a> </li> -->
                 <!-- <li> <a href="profile.php">Profile</a> </li> -->
 
-                <li> <a href="profil.php">Profil</a> </li>
+
 
                 <?php
                 if (isset($_SESSION['user'])) {
-                    echo "<li> <a href='logout.php'> Logout</a> </li>";
                     echo "<li> <a href='commentaire.php'> Write us a comment</a> </li>";
+                    echo "<li> <a href='profil.php'>Profil</a> </li>";
+                    echo "<li> <a href='logout.php'> Logout</a> </li>";
                 } else {
+                    echo "<li> <a href='inscription.php'>Sign Up</a> </li>";
                     echo "<li> <a href='connexion.php'>Login</a> </li>";
                 }
 

@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $printUser = mysqli_fetch_array($query);
     // var_dump($query);
     // print_r($printUser[2]);
-    var_dump($printUser);
+    // var_dump($printUser);
     //create the user and insert into databasse if username dosent exist
     if ($printUser == null) {
         if ($password == $repass) {
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 }
 
 
-
+$con->close();
 
 ?>
 

@@ -33,6 +33,7 @@ if (isset($_POST['subComment'])) {
     $query = mysqli_query($con, $sql);
     echo "Comment hes been sent!";
 }
+$con->close();
 
 
 
@@ -45,7 +46,7 @@ if (isset($_POST['subComment'])) {
     <form action="" method="post">
         <div class="box">
             <textarea name="comment" id="" cols="30" rows="10" required></textarea>
-            <input type="hidden" name="usrId" value="<?php echo $_SESSION['user'][0] ?>"><br>
+            <input type="hidden" name="usrId" value="<?php echo $_SESSION['user'][1] ?>"><br>
             <input type="hidden" name="date" value="<?php echo date('Y-m-d H:i:s') ?>"><br>
 
             <button type="submit" name="subComment">Send</button>

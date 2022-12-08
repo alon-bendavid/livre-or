@@ -28,6 +28,7 @@ if (isset($_POST['loginSub'])) {
         echo "No user found with that name";
     }
 }
+$con->close();
 
 ?>
 
