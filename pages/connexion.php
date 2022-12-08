@@ -43,7 +43,7 @@ $con->close();
         <div class="box">
             <input type="text" placeholder="username" name="loginUsr"><br required>
 
-            <input type="text" placeholder="password" name="loginPwd" required><br>
+            <input type="password" placeholder="password" name="loginPwd" required><br>
 
             <button type="submit" name="loginSub">Sign</button>
         </div>
