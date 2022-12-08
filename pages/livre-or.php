@@ -1,10 +1,24 @@
 <?php
 include('../includes/connect.php');
 include('header.php');
+
+
+
+
 ?>
+
 
 <body>
     <?php
+    //randomise profile picture
+    // $dir_path = "..\media";
+
+    // $files = scandir($dir_path);
+
+    // $count = count($files);
+    // $index = rand(2, ($count - 1));
+    // $filename = $files[$index];
+
     if (!isset($_SESSION['user'])) {
         echo "You have to be connected in order to write a comment.";
     }
@@ -23,6 +37,9 @@ include('header.php');
         echo "<tr>";
         echo "<td class='date'>"   . $row['date'] . "</td>";
         echo "<td class='profil'>" . '<img src="..\media\profile.png" alt="">' . $row['id_utilisateur'] . "</td>";
+        //line to randomise profile picture
+        // echo "<td class='profil'>" . '<img src="' . $dir_path . "/" . $filename++ . '" alt="' . $filename . '"">' . $row['id_utilisateur'] . "</td>";
+
         // echo "<td>" . $row['id_utilisateur'] . "</td>";
 
         echo "<td>" . $row['commentaire'] . "</td>";
