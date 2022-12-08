@@ -15,7 +15,7 @@ include('header.php');
 <tr>
 <th>Date</th>
 <th class='date'>From user</th>
-<th>Comment</th>
+<th class='comment'>Comment</th>
 
 </tr>";
 

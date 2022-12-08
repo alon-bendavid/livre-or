@@ -85,21 +85,37 @@ img{
 }
 .post{
     width: 70%;
-    background-color: rgb(232, 232, 232);
+    padding: 1em;
+   margin: 1em;
     
     
 }
 td{
     /* display: flex; */
     /* border: 1px solid; */
+    padding: 1em;
     
 }
+tr{
+
+    background-color: rgb(232, 232, 232);
+
+
+}
+th{
+    
+   
+}
 .date{
-    width: 15%;
+    width: 18%;
 }
 .profil{
     display: flex;
     align-items: center;
     
     justify-content: space-evenly;
+}
+.comment{
+    display: flex;
+  justify-content: flex-start;
 }
