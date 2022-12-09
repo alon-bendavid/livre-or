@@ -28,9 +28,15 @@ h1{
 
 
 }
-h2{
+  h2{
     font-family: 'Montserrat', sans-serif;
     font-size: medium;
+
+}
+.small_link{
+    font-family: 'Montserrat', sans-serif;
+    font-size:small;
+    color: black;
 
 }
 input{

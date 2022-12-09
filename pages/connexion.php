@@ -50,6 +50,10 @@ $con->close();
 
     </form>
 
+    <h2><a class="small_link" href="inscription.php">
+            Not registered yet?
+        </a></h2>
+
 </body>
 
 </html>
