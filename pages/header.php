@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 // if (isset($_SESSION)) {
 
@@ -7,7 +7,7 @@ session_start();
 // }
 
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,7 +20,10 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
+</head> -->
+<?php
+include('../includes/head.php')
+?>
 <header>
     <nav>
         <ul>
