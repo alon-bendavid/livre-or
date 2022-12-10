@@ -155,7 +155,7 @@ a{
             
             height: 30%;
             /* width: 80%; */
-            margin: 5%;
+            margin: 6%;
             justify-content: space-between;
             
         }
@@ -193,10 +193,11 @@ a{
         .signup {
             flex-direction: column;
             margin-top: 10%;
-            background-color: aqua;
+            /* background-color: aqua; */
             width: 15%;
             /* height: 50%; */
         justify-content: space-evenly;
+        margin-top: -5%;
         
         }
         
@@ -212,5 +213,52 @@ a{
             /* background-color: cadetblue; */
             height: 100vh;
         }
+        /* comments page */
+    
+    img{
+        width: 3em;
+    }
+    .post{
+        /* width: 80%; */
+        padding: 1em;
+       /* margin: 1em; */
+       /* margin: 0%; */
+  
+        width: 100%;
         
+       /* background-color: aqua; */
+    }
+    table{
+        
+    }
+    td{
+        /* display: flex; */
+        /* border: 1px solid; */
+        padding: 1em;
+        
+    }
+    tr{
+    
+        background-color: rgb(223, 223, 223);
+    
+    
+    }
+    th{
+        
+       
+    }
+    .date{
+        width: 18%;
+    }
+    .profil{
+        display: flex;
+        align-items: center;
+        
+        justify-content: space-evenly;
+    }
+    .comment{
+        display: flex;
+      justify-content: flex-start;
+    }
+  
         
