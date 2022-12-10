@@ -1,16 +1,27 @@
 /* fonts */
+.error{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+color: red;
+margin-left: 65%;
+margin-top: 8%;
+}
+body{
+    margin: 0%;
+}
 h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
 }
 h2{
     font-family: 'Montserrat', sans-serif;
-font-weight: lighter;
+font-weight: 500;
+font-size: 200%;
 }
 h3{
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100; 
-    font-size: medium;
+    font-weight: 300; 
+    font-size: small;
 
 }
 
@@ -24,32 +35,52 @@ h3{
 
 
 .photo{
-    
+ display: flex;   
 background-color: aqua;
 width: 50%;
 align-items: center;
+justify-content: center;
 
 }
+.photo_text{
+    position: absolute;
+
+    color: #ffffff;
+  align-self: center;
+    top: 35%;
+/* top: 35px; */
+/* margin-left: 17%; */
+/* margin-top: 14%; */
+
+    }
+    .logo{
+        position: absolute;
+        width: 4.5%;
+        top: 15%;
+
+
+    }
+    .photo_text2{
+        /* margin-top: 14%; */
+        
+                position: absolute;
+            
+                color: #ffffff;
+              align-self: center;
+                
+            top: 30%;
+            /* margin-left: 17.2%; */
+            
+                }
     
 
 /* connection page */
-.signup{
-    flex-direction: column;
-    margin-top: 5%;
-
-}
-
-.center{
-    display: flex;
-justify-content: center;
-align-items: center;
-/* background-color: #ff0909; */
-
-}
 .box{
     display: flex;
-    flex-direction: column;
-    width: 50vw;
+    /* flex-direction: column; */
+    width: 50%;
+    justify-content: center;
+    /* justify-content: space-around; */
 }
 .mainPhoto{
     width: 100%;
@@ -59,85 +90,127 @@ align-items: center;
     object-fit: cover;
     /* position: relative; */
     position: relative;
-
+    
 }
-.photo_text{
-    position: absolute;
 
-    color: #ffffff;
-  align-self: center;
-    
-top: 35px;
-margin-left: 17%;
-margin-top: 14%;
 
-    }
-    .photo_text2{
-margin-top: 14%;
+/* header{
+    background-color: darkgoldenrod;
+    height: 50px;
+} */
 
-        position: absolute;
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(196, 196, 196);
+    width: 100%;
+    list-style: none;
+    padding: 0%;
+    height: 50px;
     
-        color: #ffffff;
-      align-self: center;
-        
-    top: 100px;
-    margin-left: 17.2%;
+    /* justify-content: center; */
     
-        }
-        a{
-            text-decoration: none;
-            color: #042B3A;
-            font-family: 'Lato', sans-serif;
-        
-        }
-        ul{
-            display: flex;
-            justify-content: space-evenly;
-            /* background-color: aqua; */
-            width: 100%;
-            list-style: none;
-            
+    
+    
+}
+.navBar{
+    /* background-color: rgb(185, 185, 185); */
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    width: 80%;
+    align-items: center;
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: #042B3A;
+    font-family: 'Lato', sans-serif;
+    font-size: small;
+    
+}
+.connection_form{
+    display: flex;
+    /* background-color: aqua; */
+    flex-direction: column;
+    width: 60%;
+    height: 50%;
+    align-items: center;
+    margin-top: 18%;
+    /* justify-content: space-evenly; */
+    
+}
+.small_link{
+            /* background-color: brown; */
+            margin-top: 15%;
             
         }
         input{
-            margin: 0.5vh;
-            border-radius: 15px;
-            width: 16em;
+            border-radius: 25px;
             
             
             border-style:solid;
-            /* border:none */
-           height: 3.5vh;
-          margin: 5%;
+            
+            height: 30%;
+            /* width: 80%; */
+            margin: 5%;
+            justify-content: space-between;
             
         }
         button{
-            width: 4em;
+            /* width: 15%; */
             /* background-color: rgb(37, 190, 255); */
             border-radius: 5px;
             border-style: none;
             background: rgb(4,38,50);
             background: linear-gradient(90deg, rgba(4,38,50,1) 0%, rgba(1,82,109,1) 53%, rgba(62,129,203,1) 100%);            width: 15em;
             border-radius: 25px;
-         margin-left: 11%;
-         margin-top: 8%;   
+            /* height: 25%; */
+            /* margin-left: 11%; */
+            /* margin-top: 8%;    */
         }
         .sign{
             
-        color: #ffffff;
-        align-self: center;
-    
+            color: #ffffff;
+            align-self: center;
+            font-size: larger;
         }
-    /* .logo{
-        width: 5px;
-        height: 5px;
-    } */
-
-    /* sign up page */
-    .navBar{
-    display: flex;
-    /* background-color: rgb(226, 18, 18); */
-width: 100vw;
-justify-content: space-evenly;
-background-color: rgb(64, 231, 253);
-}
+        /* .logo{
+            width: 5px;
+            height: 5px;
+        } */
+        
+        /* sign up page */
+        .sign_up_box{
+            width: 100%;
+           
+            /* background-color: brown; */
+            height: 70%;
+     
+        }
+        .signup {
+            flex-direction: column;
+            margin-top: 10%;
+            background-color: aqua;
+            width: 15%;
+            /* height: 50%; */
+        justify-content: space-evenly;
+        
+        }
+        
+        .center{
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #ff0909; */
+        
+        }
+        .body_signUP{
+            
+            /* background-color: cadetblue; */
+            height: 100vh;
+        }
+        
+        

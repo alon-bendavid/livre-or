@@ -39,22 +39,22 @@ $con->close();
 ?>
 
 
-<body>
+<body class="body_signUP">
+    <div class="sign_up_box center">
+        <div class="signup center">
+            <h1>sign up page</h1>
+            <form action="inscription.php" method="post">
+                <input type="text" placeholder="username" name="username"><br required>
+                <input type="password" placeholder="password" name="password" required><br>
+                <input type="password" placeholder="retype password" name="repass" required><br>
+                <button type="submit" name="submit">
+                    <p class="sign">Sign Up!</p>
+                </button>
 
-    <div class="signup center">
-        <h1>sign up page</h1>
-        <form action="inscription.php" method="post">
-            <input type="text" placeholder="username" name="username"><br required>
-            <input type="password" placeholder="password" name="password" required><br>
-            <input type="password" placeholder="retype password" name="repass" required><br>
-            <button type="submit" name="submit">
-                <p class="sign">Sign Up!</p>
-            </button>
 
-
-        </form>
-    </div>
-
+            </form>
+        </div>
+        <!-- </div> -->
 </body>
 
 </html>
