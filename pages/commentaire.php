@@ -42,19 +42,20 @@ $con->close();
 
 
 <body>
-    <h1>sign up page</h1>
-    <form action="" method="post">
-        <div class="box">
-            <textarea name="comment" id="" cols="30" rows="10" required></textarea>
-            <input type="hidden" name="usrId" value="<?php echo $_SESSION['user'][1] ?>"><br>
-            <input type="hidden" name="date" value="<?php echo date('Y-m-d H:i:s') ?>"><br>
+    <div>
+        <div class="profil">
+            <h1>Send a comment!</h1>
+            <form action="" method="post">
+                <textarea name="comment" id="" cols="30" rows="10" required></textarea>
+                <input type="hidden" name="usrId" value="<?php echo $_SESSION['user'][1] ?>"><br>
+                <input type="hidden" name="date" value="<?php echo date('Y-m-d H:i:s') ?>"><br>
 
-            <button type="submit" name="subComment">Send</button>
+                <button class="sign" type="submit" name="subComment">Send</button>
 
+
+            </form>
         </div>
-
-    </form>
-
+    </div>
 </body>
 
 </html>

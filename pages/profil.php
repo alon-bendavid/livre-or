@@ -37,23 +37,18 @@
     ?>
 
  <body>
-     <h1>Edit your profile</h1>
-     <?php
-        // var_dump($_SESSION['user']);
-        // var_dump($_SESSION['useInfo'][0]);
-        // var_dump($_POST['editUsr']);
-        // var_dump($usrId);
-        // var_dump($_SESSION['userInfo'][0]);
-
-        ?>
      <div>
-         <form action="profil.php" method="post">
-             <input type="text" placeholder='New Username' name="editUsr"><br>
-             <input type="text" placeholder="New Password" name="editPwd"><br>
-             <input type="text" placeholder="Retype password" name="rePwd"><br>
-             <button type="submit" name="editSub">Edit</button>
-             <!-- <input type="submit" name="editSub">edit</input> -->
-         </form>
+         <div class="profil">
+             <h2>Edit your profile</h2>
+
+             <form action="profil.php" method="post">
+                 <input type="text" placeholder='New Username' name="editUsr"><br>
+                 <input type="text" placeholder="New Password" name="editPwd"><br>
+                 <input type="text" placeholder="Retype password" name="rePwd"><br>
+                 <button class="sign" type="submit" name="editSub">Edit</button>
+                 <!-- <input type="submit" name="editSub">edit</input> -->
+             </form>
+         </div>
      </div>
  </body>
 

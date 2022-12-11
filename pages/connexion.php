@@ -55,7 +55,7 @@ $con->close();
                     <input type="password" placeholder="password" name="loginPwd" required><br>
 
                     <button type="submit" name="loginSub">
-                        <p class="sign">Sign in</p>
+                        <h2 class="sign">Sign in</h2>
                     </button>
 
                 </form>

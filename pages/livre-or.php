@@ -36,7 +36,7 @@ include('header.php');
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
         echo "<td class='date'>"   . $row['date'] . "</td>";
-        echo "<td class='profil'>" . '<img src="..\media\profile.png" alt="">' . $row['id_utilisateur'] . "</td>";
+        echo "<td >" . '<img src="..\media\profile.png" alt="">' . $row['id_utilisateur'] . "</td>";
         //line to randomise profile picture
         // echo "<td class='profil'>" . '<img src="' . $dir_path . "/" . $filename++ . '" alt="' . $filename . '"">' . $row['id_utilisateur'] . "</td>";
 

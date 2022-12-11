@@ -40,15 +40,15 @@ $con->close();
 
 
 <body class="body_signUP">
-    <div class="sign_up_box center">
-        <div class="signup center">
+    <div>
+        <div class="profil">
             <h1>sign up page</h1>
             <form action="inscription.php" method="post">
                 <input type="text" placeholder="username" name="username"><br required>
                 <input type="password" placeholder="password" name="password" required><br>
                 <input type="password" placeholder="retype password" name="repass" required><br>
                 <button type="submit" name="submit">
-                    <p class="sign">Sign Up!</p>
+                    <h2 class="sign">Sign Up!</h2>
                 </button>
 
 
