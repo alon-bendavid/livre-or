@@ -62,8 +62,8 @@ $con->close();
                 <h3 class="small_link"><a href="inscription.php">
                         Not a member yet? <strong>Sign Up!</strong>
                     </a></h3>
+                <a class="logoGit" href="https://github.com/alon-bendavid/livre-or"><img src="..\media\GitHub-Logo.png" alt=""></a>
             </div>
-            <!-- <a class="logo" href="https://github.com/alon-bendavid/livre-or"><img src="..\media\GitHub-Logo.png" alt=""></a> -->
         </div>
     </div>
 </body>

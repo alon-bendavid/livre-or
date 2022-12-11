@@ -27,6 +27,7 @@ include('../includes/head.php')
 <header>
     <nav>
         <ul>
+            <img class="logoHeader" src="..\media\logo-01.png" alt="">
             <div class="navBar" method="post">
                 <li> <a href="index.php">Home</a> </li>
                 <li> <a href="livre-or.php">Livre-or</a> </li>
@@ -48,7 +49,7 @@ include('../includes/head.php')
                 }
                 if (isset($_SESSION['user'])) {
 
-                    echo  $_SESSION['user'][1] . " you are connected";
+                    echo  '<li class="message"> Welcome <br>  ' . $_SESSION['user'][1] . '   </li>';
                 }
                 ?>
 
