@@ -8,6 +8,9 @@ include('../includes/connect.php');
 if (mysqli_connect_errno()) {
     die('conecnection error' . mysqli_connect_error());
 }
+if (isset($_SESSION['message'])) {
+    echo "<p class='message'>account successfully created!</p>";
+}
 if (isset($_POST['loginSub'])) {
     // echo "it works";
     $username = $_POST['loginUsr'];
@@ -27,6 +30,11 @@ if (isset($_POST['loginSub'])) {
     } else {
         echo "<p class='error'>No user found with that name</p>";
     }
+}
+if (isset($_SESSION['message'])) {
+    usleep(1000);
+    session_destroy();
+    // session_start();
 }
 $con->close();
 

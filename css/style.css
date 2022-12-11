@@ -3,14 +3,29 @@
     position: absolute;
     font-family: 'Montserrat', sans-serif;
 color: red;
-margin-left: 60%;
+margin-left: 62%;
 margin-top: 8%;
+/* background-color: blue; */
+width: 25%;
+}
+.error_2{
+    /* position: absolute; */
+    font-family: 'Montserrat', sans-serif;
+color: red;
+/* margin-left: 62%; */
+margin-top: 8%;
+/* background-color: blue; */
+width: 25%;
+margin-left: 37%;
 }
 .message{
+    position: absolute;
     font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 100, 146);
-    font-size: small;
-
+color: rgb(1, 109, 151);
+margin-left: 64%;
+margin-top: 8%;
+/* background-color: blue; */
+width: 25%;
 }
 
 body{

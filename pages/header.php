@@ -30,7 +30,7 @@ include('../includes/head.php')
             <img class="logoHeader" src="..\media\logo-01.png" alt="">
             <div class="navBar" method="post">
                 <li> <a href="index.php">Home</a> </li>
-                <li> <a href="livre-or.php">Livre-or</a> </li>
+                <li> <a href="livre-or.php">Livre d'or</a> </li>
 
 
                 <!-- <li> <a href="connexion.php">Log In</a> </li> -->

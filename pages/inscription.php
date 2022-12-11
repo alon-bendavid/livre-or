@@ -20,16 +20,17 @@ if (isset($_POST['submit'])) {
     if ($printUser == null) {
         if ($password == $repass) {
 
-            echo "Acount hes successfully created!";
+            // echo "Acount hes successfully created!";
             //insert information into databse
             $sql = "INSERT INTO `utilisateurs`(`id`, `login`, `password`) VALUES (null,'$username','$password')";
             $query = mysqli_query($con, $sql);
+            $_SESSION['message'] = 'Account successfully created!';
             header('Location: ' . 'connexion.php');
         } elseif ($password != $repass) {
-            echo "Password doesnt match, please retype password";
+            echo "<p class='error_2'>Password doesnt match, please retype password</p>";
         }
     } else {
-        echo "Username already taken, please choose another username";
+        echo "<p class='error_2'>Username already taken, please choose another username</p>";
     }
 }
 

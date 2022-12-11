@@ -31,7 +31,7 @@ if (isset($_POST['subComment'])) {
     //insert information into databse
     $sql = "INSERT INTO `commentaires`(`id`, `commentaire`, `id_utilisateur`, `date`) VALUES (null,'$comment','$usrId','$date')";
     $query = mysqli_query($con, $sql);
-    echo "Comment hes been sent!";
+    echo "<p class='message'>Comment hes been sent!</p>";
 }
 $con->close();
 
