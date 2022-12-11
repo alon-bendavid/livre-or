@@ -47,10 +47,10 @@ include('../includes/head.php')
                     echo "<li> <a href='inscription.php'>Sign Up</a> </li>";
                     echo "<li> <a href='connexion.php'>Login</a> </li>";
                 }
-                if (isset($_SESSION['user'])) {
+                // if (isset($_SESSION['user'])) {
 
-                    echo  '<li class="message"> Welcome <br>  ' . $_SESSION['user'][1] . '   </li>';
-                }
+                //     echo  '<li class="message"> Welcome <br>  ' . $_SESSION['user'][1] . '   </li>';
+                // }
                 ?>
 
                 <table>
