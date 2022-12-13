@@ -8,7 +8,9 @@ date_default_timezone_set('europe/paris');
 if (isset($_SESSION['user'])) {
 }
 if (isset($_POST['subComment'])) {
-    $comment = $_POST['comment'];
+
+    $comment =  Htmlspecialchars($_POST['comment'], ENT_QUOTES);
+
     $usrId = $_POST['usrId'];
     $date = $_POST['date'];
     // echo $comment;
